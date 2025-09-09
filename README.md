@@ -1,226 +1,143 @@
-Post-Training of LLMs: Transforming Your Model from Ordinary to Extraordinary
+# 🚀 Post-Training of LLMs  
+*Transforming Your Model from Ordinary to Extraordinary*  
 
-Large Language Models (LLMs) began as machines that predicted the next word. But what transformed them into assistants, teachers, coders, and creative collaborators?
+Large Language Models (LLMs) started as simple next-word predictors.  
+But what turned them into **assistants, teachers, coders, and creative collaborators**?  
 
-The answer: Post-training.
+👉 **The answer: Post-training.**  
 
-This project explores key techniques for refining pre-trained LLMs to make them more helpful, safe, and aligned. While we'll overview several approaches—including SFT, DPO, and PEFT—our primary focus is on Online Reinforcement Learning (RL), the most dynamic path toward intelligent, value-aligned models.
+This repo explores the **key techniques** for refining pre-trained LLMs to make them **helpful, safe, and aligned**.  
+While we’ll overview several methods (SFT, DPO, PEFT), our **main focus** is **Online Reinforcement Learning (RL)** — the most dynamic path toward intelligent, value-aligned models.  
 
-📚 Table of Contents
+---
 
-Introduction
+## 📚 Table of Contents
+- [🧠 Introduction](#-introduction)  
+- [🧱 Why Post-Training?](#-why-post-training)  
+- [🛠️ Techniques Overview](#️-techniques-overview)  
+  - [🎯 SFT — Supervised Fine-Tuning](#-sft--supervised-fine-tuning)  
+  - [⚖️ DPO — Direct Preference Optimization](#️-dpo--direct-preference-optimization)  
+  - [🧩 PEFT — Parameter-Efficient Fine-Tuning](#-peft--parameter-efficient-fine-tuning)  
+  - [🧠 Online Reinforcement Learning](#-online-reinforcement-learning)  
+- [🎭 Reward Models](#-reward-models)  
+- [🎨 Final Thoughts](#-final-thoughts)  
+- [📦 Resources](#-resources)  
+- [👥 Owner](#-owner)  
+- [📄 License](#-license)  
 
-Why Post-Training?
+---
 
-Techniques Overview
+## 🧠 Introduction
+Post-training transforms a **raw LLM** into a **purpose-driven, value-aware assistant**.  
 
-SFT - Supervised Fine-Tuning
+This repo covers:  
+✔️ The *why* behind post-training  
+✔️ Comparison of fine-tuning approaches  
+✔️ Deep dive into Reinforcement Learning  
+✔️ Hands-on resources & code  
 
-DPO - Direct Preference Optimization
+---
 
-PEFT - Parameter-Efficient Fine-Tuning
+## 🧱 Why Post-Training?
+A pre-trained LLM understands **language**, but not **behavior, context, or correctness**.  
 
-🔬 Online Reinforcement Learning
+👉 Think of it like onboarding a new employee: they *speak the language* but must learn the **company culture**.  
 
-Reward Models
+❌ Without post-training, LLMs may:  
+- Hallucinate or provide incorrect info  
+- Miss user intent  
+- Act unpredictably or unethically  
 
-Final Thoughts
+✅ With post-training, LLMs:  
+- Align with **human values**  
+- Adapt to **domain-specific needs**  
+- Improve **reliability & safety**  
 
-Resources
+---
 
-License
+## 🛠️ Techniques Overview  
 
-🧠 Introduction
+### 🎯 SFT — Supervised Fine-Tuning  
+Teach the model by **example** with input–output pairs.  
+- **Pros:** Simple, fast, effective for new tasks  
+- **Cons:** Limited generalization, dataset quality dependent  
 
-Post-training is the essential step that transforms a raw LLM from a general-purpose word predictor into a purpose-driven, value-aware assistant. This repository and accompanying guide dive into:
+---
 
-The "why" behind post-training
+### ⚖️ DPO — Direct Preference Optimization  
+Instead of telling *what to do*, show **what not to do**.  
+- **Pros:** Removes unwanted behavior, aligns preferences  
+- **Cons:** Sensitive to bias, more complex  
 
-Comparison of various fine-tuning approaches
+---
 
-In-depth explanation of reinforcement learning
+### 🧩 PEFT — Parameter-Efficient Fine-Tuning  
+Update **only parts of the model** for efficiency.  
+- **Examples:** LoRA, Adapter Tuning  
+- **Pros:** Memory-efficient, good for small data  
+- **Cons:** Requires tuning, not always scalable  
 
-Code resources and learning materials to get hands-on
+---
 
-🧱 Why Post-Training?
+### 🧠 Online Reinforcement Learning  
+The **heart of post-training** — models learn *why*, not just *what*.  
 
-Pre-trained models understand language, but not behavior, context, or correctness.
+**Process (PPO):**  
+1. Model generates a response  
+2. Reward model scores it  
+3. Compute “advantage”  
+4. Update policy  
 
-Think of post-training like onboarding a new hire: they speak the language but must learn the company culture.
+- **Pros:** Deep alignment, adaptive learning  
+- **Cons:** Expensive, reward design critical  
 
-Without post-training, LLMs may:
+---
 
-Hallucinate or provide incorrect information
+## 🎭 Reward Models  
+Reward models = *teachers* for LLMs.  
+- Initialized from **SFT models**  
+- Fine-tuned with **human preference data**  
 
-Miss user intent
+⚠️ Poor design can cause failures (especially in math/code).  
 
-Behave unpredictably or unethically
+---
 
-Post-training helps align models with human values and domain-specific expectations.
+## 🎨 Final Thoughts  
+Post-training is **science + art**:  
+- Teaches behavior  
+- Aligns values  
+- Boosts real-world performance  
 
-🧰 Techniques Overview
-🎯 SFT — Supervised Fine-Tuning
+📊 **Summary**  
 
-Supervised Fine-Tuning teaches the model by example. It’s the foundation of many instruction-tuned models.
+| Technique | Purpose | Best For |
+|-----------|---------|----------|
+| SFT | Mimic ideal outputs | Quick prototyping |
+| DPO | Align preferences | Behavioral correction |
+| PEFT | Lightweight updates | Resource-constrained tuning |
+| RL  | Learn via feedback | Deep alignment |
 
-How it works:
+---
 
-Provide input-output pairs
+## 📦 Resources  
 
-Train the model to mimic ideal responses
+🔹 **GitHub Practice Notebooks**  
+Hands-on code for GRPO, PPO, SFT, DPO  
 
-Pros:
+🔹 **🎓 DeepLearning.AI Course**  
+[Post-training of LLMs](https://www.deeplearning.ai/short-courses/post-training-of-llms/)  
+Made with University of Washington & NexusFlow  
 
-Easy to implement
+---
 
-Fast and effective for new tasks
+## 👥 Owner  
+Repo maintained by: [DeepLearning.AI](https://www.deeplearning.ai/)  
 
-Cons:
+Want to contribute? ✨ Open a PR or create an issue!  
 
-Limited generalization
+---
 
-Quality depends on the dataset
+## 📄 License  
+Distributed under the **MIT License**. See `LICENSE` for details.  
 
-⚖️ DPO — Direct Preference Optimization
-
-Instead of telling the model what to do, DPO shows it what not to do.
-
-How it works:
-
-Compare pairs of outputs (preferred vs. non-preferred)
-
-Use feedback to adjust behavior
-
-Pros:
-
-Great for removing unwanted behavior
-
-Encourages human-like preferences
-
-Cons:
-
-Sensitive to biases in preference data
-
-Implementation is more complex than SFT
-
-🧩 PEFT — Parameter-Efficient Fine-Tuning
-
-Update only a small part of the model to achieve big results.
-
-Examples: LoRA, Adapter Tuning
-
-Pros:
-
-Memory and compute efficient
-
-Works with small datasets
-
-Lower risk of catastrophic forgetting
-
-Cons:
-
-May require careful tuning
-
-Not always suitable for large-scale shifts
-
-🧠 Online Reinforcement Learning
-
-The heart of post-training for models that learn why, not just what.
-
-Why RL?
-
-Like a child learning from trial and error, RL lets LLMs adapt based on outcomes and feedback.
-
-🌀 PPO (Proximal Policy Optimization)
-
-Steps:
-
-Model generates a response
-
-A reward model scores it
-
-Calculate "advantage"
-
-Update policy accordingly
-
-Pros:
-
-High alignment with desired behaviors
-
-Promotes deeper understanding
-
-Cons:
-
-Computationally expensive
-
-Requires high-quality reward signals
-
-🎭 Reward Models
-
-Reward Models assign scores to outputs. They are:
-
-Often initialized from SFT-trained models
-
-Fine-tuned using human preference data
-
-Caution: Poor reward design (especially in math/code domains) can lead to unintended behavior.
-
-🎨 Final Thoughts
-
-Post-training is part science, part art. It’s how we:
-
-Teach LLMs how to behave
-
-Align them with values
-
-Improve performance on real-world tasks
-
-Summary of Techniques:
-Technique	Purpose	Best For
-SFT	Mimic ideal outputs	Quick prototyping
-DPO	Align preferences	Behavioral correction
-PEFT	Lightweight updates	Resource-constrained tuning
-RL	Teach via feedback	Deep alignment
-📦 Resources
-GitHub Practice Notebooks
-
-Hands-on code examples for:
-
-GRPO
-
-PPO
-
-SFT
-
-DPO
-
-Access real-world Jupyter Notebooks to implement and experiment.
-
-🎓 DeepLearning.AI Course
-
-“Post-training of LLMs”
-Created with the University of Washington and NexusFlow.
-A concise, effective course to dive deeper into post-training techniques.
-
-💡 Your Challenge
-
-Imagine a model tailored for your use case. Ask yourself:
-
-Is SFT enough?
-
-Should you design a reward function?
-
-Could RL elevate your application?
-
-Your next model might just be your most aligned one yet.
-
-👥 OWNER
-
-https://www.deeplearning.ai/short-courses/post-training-of-llms/
-
-Want to contribute? Open a PR or create an issue!
-
-📄 License
-
-Distributed under the MIT License.
-See LICENSE for more information.
+---
