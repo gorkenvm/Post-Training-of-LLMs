@@ -1,0 +1,10 @@
+# Core dependencies
+torch
+transformers
+trl
+datasets
+pandas
+tqdm
+
+# Optional (recommended if you’re using torch vision ops or GPU utils)
+# torchvision
